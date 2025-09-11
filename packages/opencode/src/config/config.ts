@@ -413,7 +413,10 @@ export namespace Config {
                 .object({
                   apiKey: z.string().optional(),
                   baseURL: z.string().optional(),
-                  githubEnterpriseUrl: z.string().optional().describe("GitHub Enterprise Server URL for copilot authentication"),
+                  githubEnterpriseUrl: z
+                    .string()
+                    .optional()
+                    .describe("GitHub Enterprise Server URL for copilot authentication"),
                   timeout: z
                     .union([
                       z
